@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="ads-dashboard.css">
+    <link rel="stylesheet" href="ads-dashboard-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+
+
+
+    <section class="dashboardSection align-items-start ">
+
+        <div class="p-0 row justify-content-between w-100">
+            <div class=" col-2 p-0" style=" height: 100vh; position:fixed; top: 0%; ">
+                <header style=" height: 100%; " class="d-none d-lg-block sidebar-border">
+                    <!-- Sidebar -->
+                    <nav id="sidebarMenu" style="height: 95vh;" class="  collapse d-lg-block sidebar collapse bg-white"
+                        style="position: relative;">
+                        <div class=" position-sticky">
+                            <div class=" list-group list-group-flush mx-0 mt-0">
+                                <div class="logo-menu">
+                                    <img src="images/logo.png" width="100px">
+                                    <button class="navbar-toggler" onclick="togglediv('menuPopup')" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <img src="images/menu.png"
+                                            style="width: 40px; height: 20px; padding-right: 1em;" alt="menu" />
+                                    </button>
+                                </div>
+
+                                <p style="font-weight: 700; font-size: 20px;
+                            margin-left: 1rem;">Ads Manager</p>
+
+
+
+
+                                <div style="position: relative;">
+
+                                    <a onclick="togglediv('accountdropdown'); rotateArrow('arrow');" href="#"
+                                        class="mb-1 list-group-item name-section list-group-item-action py-2 ripple"
+                                        aria-current="true">
+                                        <!-- <i class="fas fa-light fa-user-tie account me-3"></i> -->
+                                        <img src="images/pic-profile.png" />
+                                        <span style="font-size: 15px;">
+                                            Mathew
+                                            <img style="margin-left: 3em;" id='arrow'
+                                                src="images/arrow_drop_down_FILL.png" />
+                                        </span>
+                                    </a>
+                                    <div id="accountdropdown" class=" box-template w-100"
+                                        style=" border-radius: 0px 0px 10px 10px; padding: 0.2em;">
+                                        <div class="d-flex flex-row justify-content-between p-1 pt-2 pb-2"
+                                            style="border: 1px solid #f1eaea; border-radius: 10px; font-size: 0.8vw; ">
+                                            <input style="border: none;" placeholder="Search for Business & Accounts" />
+                                            <img style="opacity: 0.6; height: 15px;"
+                                                src="images/search_FILL0_wght400.png" />
+                                        </div>
+                                        <div
+                                            style="padding: 0.8em 0.5em ; padding-bottom: 0.5em; border-bottom: 1px solid #f1eaea;">
+                                            <p class="fw-bold mb-1" style="font-size: 0.9vw;">Business accounts</p>
+                                            <div>
+                                                <img src="images/pic-profile.png">
+                                                <span class="fw-bold mx-2 ">Infotech</span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="padding: 0.8em 0.5em ; padding-bottom: 0.5em; border-bottom: 1px solid #f1eaea;">
+                                            <p class="fw-bold mb-1" style="font-size: 0.9vw;">Your accounts</p>
+                                            <div>
+                                                <img src="images/pic-profile.png">
+                                                <span class="fw-bold mx-2 ">Mathew</span>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 py-3">
+                                            <img src="images/upload_FILL0_wght400_GRAD0_opsz48.svg"
+                                                style="height: 2em; transform: rotate(90deg);" />
+                                            Logout
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <a href="ads-dashboard.html"
+                                    class="py-2  list-group-item list-group-item-action py-2 ripple"
+                                    aria-current="true">
+                                    <!-- <i class="fas fa-tachometer-alt fa-fw me-3 account"></i> -->
+                                    <img src="images/account.png" />
+                                    <span style="font-size: 15px; ">Account overview</span>
+                                </a>
+
+
+                                <a href="#" class="py-2 list-group-item list-group-item-action py-2 ripple">
+                                    <!-- <i class="fas fa-light fa-users account me-3"></i> -->
+                                    <img src="images/audience.png" />
+                                    <span style="font-size: 15px;">Audiences</span>
+                                </a>
+
+
+                                <a href="accountSetup.html"
+                                    class="py-2 list-group-item list-group-item-action py-2 ripple">
+                                    <!-- <i class="fas fa-regular fa-wallet me-3 account"></i> -->
+                                    <img src="images/setup.png" />
+                                    <span style="font-size: 15px; ">Ad Account Setup</span></a>
+
+
+                                <a href="paymentSetting.html"
+                                    class="py-2 list-group-item list-group-item-action py-2 ripple">
+                                    <!-- <i class="fas fa-sharp fa-light fa-credit-card me-3 account"></i> -->
+                                    <img src="images/payment.png" />
+                                    <span style="font-size: 15px; color: #131C61;">Payment settings</a> </span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="navbarFooter2">
+                            <!-- <i class="fas fa-light fa-gear" style="padding-right: 0.5rem; font-size: 1rem;"></i> -->
+                            <img src="images/settings_FILL0_wght4.png" />
+                            <!-- <i class="fas fa-sharp fa-regular fa-bell" style="padding-right: 0.5rem; font-size: 1rem;"></i> -->
+                            <img src="images/notifications_FILL0_.png" />
+                            <img src="images/search_FILL0_wght400.png" />
+                            <a href="help.html"> <img src="images/help_FILL0_wght400_G.png" /> </a>
+                            <!-- <i class="fas fa-light fa-bug" style="padding-right: 0.5rem; font-size: 1rem;"></i> -->
+                            <img src="images/pest_control_FILL0_w.png" />
+                        </div>
+                    </nav>
+                    <!-- Sidebar -->
+                </header>
+            </div>
+            <div class="menuPopup box-template" id="menuPopup">
+                <div class="fw-bold text-black text-start my-3" style="font-size: 1.5vw;">
+                    All
+                    Tools</div>
+                <p class="fw-bold text-start my-3">Shortcuts</p>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class=" m-3 d-flex flex-column  align-items-center justify-content-center">
+                        <img src="images/overview_FILL0_wght400_GRAD0_opsz48.svg" />
+                        <p class="my-3 fw-semibold">Ads Manager</p>
+                    </div>
+
+                    <div class="m-3 d-flex flex-column  align-items-center justify-content-center">
+
+                        <img src="images/account_balance_wallet_FILL0_wght400_GRAD0_opsz48.svg" />
+                        <p class="my-3 fw-semibold">
+                            <a href="accountSetup.html" style="color: black;">
+                                Account Setup
+                            </a>
+                        </p>
+
+                    </div>
+                    <div class="m-3 d-flex flex-column  align-items-center justify-content-center">
+                        <img src="images/sheild-clock.svg" />
+                        <p class="my-3 fw-semibold">Brand Safety</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div class=" m-3 d-flex flex-column  align-items-center justify-content-center px-3">
+                        <img src="images/credit_card_FILL0_wght400_GRAD0_opsz48.svg" />
+                        <p class="my-3 fw-semibold">Billing</p>
+                    </div>
+
+                    <div class="m-3 d-flex flex-column  align-items-center justify-content-center">
+                        <img src="images/people_group.svg" />
+                        <p class="my-3 fw-semibold">Audience</p>
+                    </div>
+                    <div style="visibility: hidden;"
+                        class="m-3 d-flex flex-column  align-items-center justify-content-center">
+                        <img src="images/sheild-clock.svg" />
+                        <p class="my-3 fw-semibold">Brand Safety</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 campaignDetails ">
+                <div style="width: 84%;"
+                    class=" fw-bold d-flex flex-row justify-content-between align-items-center help-screen-right-side ">
+                    <div style="font-size: 1.3vw;">Payment Settings</div>
+                    <div>
+                        <div style="position: relative; width: 15em; margin-left: 1em;">
+                            <input
+                                style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                placeholder="Mathew (123643256768)" />
+                            <img onclick="togglediv('BuyingTypedropdown'); rotateArrow('arrow2');" id="arrow2"
+                                src="images/arrow_drop_down_FILL.png"
+                                style=" cursor: pointer; position: absolute; top: 40%; right: 2%;" />
+                            <div id="BuyingTypedropdown" class="w-100">
+
+                                <div value="1" class="mb-2">Methew</div>
+                                <div value="1" class="mb-2">Infotech
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row px-4" style="width: 84%;">
+                    <div class="col-7">
+                        <div class="box-template mb-3" style="background-color: #f1eaea;">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <div style="color: #131C61; font-weight: bold;">Prepaid Funds</div>
+                                <div style="position: relative; cursor: pointer;"
+                                    onclick="togglediv('viewHistoryDropdown')">
+                                    ⋅⋅⋅
+                                    <div style=" padding: 0.8em; background-color: white; color: #000; font-weight: bold; border: none; border-radius: 10px;"
+                                        id="viewHistoryDropdown">
+                                        View History
+                                    </div>
+                                </div>
+                            </div>
+                            <div style=" margin-top: 0.8em; font-weight: bold; font-size: 1.5vw;">$ 00.01</div>
+                            <p style="color: #131C61; font-weight: lighter; margin-top: 2em;">
+                                How you'll pay
+                            </p>
+                            <p class="d-flex flex-row justify-content-start align-items-center">
+                                <img style="width: 1.8em; color: #131C61; "
+                                    src="images/credit_card_FILL0_wght400_GRAD0_opsz48.svg" />
+                                <span style="color: #000; font-weight: bold;" class="mx-2">Prepaid Funds</span>
+                            </p>
+                            <div style="font-size: 1vw;">We'll deduct funds about once a day when you run ads. If funds
+                                run out, your add will be paused.</div>
+                        </div>
+                        <div class="box-template mb-3">
+                            <p style="color: #131C61; font-weight: bold;">Ad Credits</p>
+                            <div style=" margin-top: 0.8em; font-weight: bold; font-size: 1.5vw;">$ 00.01</div>
+                        </div>
+                        <div class="box-template mb-3" style="position: relative;">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <div style="color: #131C61; font-weight: bold;">Add Payment Method</div>
+                                <button onclick="togglediv('PaymentMethodPopup')"
+                                    style=" border: none; padding: 0.8em 1.5em; background-color: #f1eaea; border-radius: 10px; color: #131C61; font-weight: bold;">
+                                    Add Payment Method
+                                </button>
+                            </div>
+                            <div id="PaymentMethodPopup" class="box-template">
+                                <div class="d-flex flex-row justify-content-between align-items-center">
+                                    <div style="color: #000; font-weight: bold;">Add Payment Method</div>
+                                    <img style="cursor: pointer;" onclick="togglediv('PaymentMethodPopup')"
+                                        src="images/close_FILL0_wght400_GRAD0_opsz48.svg" />
+                                </div>
+                                <div class="column text-start">
+                                    <div class="mb-2">
+                                        <input type="radio" name="paymentMethod" />
+                                        <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">Debit or
+                                            Credit card</label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="radio" name="paymentMethod" />
+                                        <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                            UPI
+                                        </label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="radio" name="paymentMethod" />
+                                        <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                            Paytm
+                                        </label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="radio" name="paymentMethod" />
+                                        <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                            Net Banking
+                                        </label>
+                                    </div>
+                                    <div class="mb-2">
+                                        <input type="radio" name="paymentMethod" />
+                                        <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                            3 months no cost-EMI credit card
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between align-items-center">
+                                    <div style="color: #131C61; font-weight: bold; font-size: 0.9vw;">
+                                        Your payment methods are saved securly.
+                                    </div>
+                                    <button
+                                        style=" border: none; padding: 0.8em 1.5em; background-color: #4CDA4F; border-radius: 10px; color: #fff; font-weight: bold;">
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                            <div style=" margin-top: 0.8em; font-weight: bold; font-size: 1vw;">
+                                You haven't added any payment methods.
+                            </div>
+                        </div>
+                        <div class="box-template mb-3">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <div style="color: #131C61; font-weight: bold;">Payment Activity</div>
+                                <div><a href="paymentActivity.html"
+                                        style="color: #4CDA4F; font-weight: bold; text-decoration: none;">View all</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold row my-2" style="font-size: 1.2vw;">
+                                    <div class="col-3">Date</div>
+                                    <div class="col-4">Payment method</div>
+                                    <div class="col-3">Amount</div>
+                                    <div class="col-2">Status</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-3">10 Jan 2023</div>
+                                    <div class="col-4">Prepaid Balance</div>
+                                    <div class="col-3">$123.33</div>
+                                    <div class="col-2"><span style="color: #4CDA4F;">⋅</span>Paid</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-3">10 Jan 2023</div>
+                                    <div class="col-4">Prepaid Balance</div>
+                                    <div class="col-3">$123.33</div>
+                                    <div class="col-2"><span style="color: #4CDA4F;">⋅</span>Paid</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-3">10 Jan 2023</div>
+                                    <div class="col-4">Prepaid Balance</div>
+                                    <div class="col-3">$123.33</div>
+                                    <div class="col-2"><span style="color: #4CDA4F;">⋅</span>Paid</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-3">10 Jan 2023</div>
+                                    <div class="col-4">Prepaid Balance</div>
+                                    <div class="col-3">$123.33</div>
+                                    <div class="col-2"><span style="color: #4CDA4F;">⋅</span>Paid</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-3">10 Jan 2023</div>
+                                    <div class="col-4">Prepaid Balance</div>
+                                    <div class="col-3">$123.33</div>
+                                    <div class="col-2"><span style="color: #4CDA4F;">⋅</span>Funded</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-template mb-3">
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <div style="color: #131C61; font-weight: bold;">Business Info</div>
+                                <button onclick="togglediv('BusinessInfoPopup')"
+                                    style="border: none; padding: 0.8em 1.5em; background-color: #f1eaea; border-radius: 10px; color: #131C61; font-weight: bold;">
+                                    Edit
+                                </button>
+                            </div>
+                            <div id="BusinessInfoPopup" class="box-template p-0">
+                                <div style="background-color: #d8f5d6;"
+                                    class="p-2 d-flex flex-row justify-content-between align-items-center">
+                                    <div style="color: #000; font-weight: bold;">Business Info</div>
+                                    <img style="cursor: pointer;" onclick="togglediv('BusinessInfoPopup')"
+                                        src="images/close_FILL0_wght400_GRAD0_opsz48.svg" />
+                                </div>
+                                <div class="p-2">
+                                    <p class="fw-bold">Billing Country or Region</p>
+                                    <div style="position: relative; width: 100%; ">
+                                        <input
+                                            style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                            placeholder="Netherland" />
+                                        <img onclick="togglediv('AMdropdown'); rotateArrow('arrow3');" id="arrow3"
+                                            src="images/arrow_drop_down_FILL.png"
+                                            style=" cursor: pointer; position: absolute; top: 40%; right: 2%;" />
+                                        <div id="AMdropdown" class="w-100">
+                                            <div value="1" class="mb-2">Netherland</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="fw-bold mb-1 mt-2">Currency and time zone</p>
+                                            <div style="position: relative; width: 100%; ">
+                                                <input
+                                                    style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                                    placeholder="Euro(EUR)" />
+                                                <img onclick="togglediv('DBDropdown'); rotateArrow('arrow4');"
+                                                    id="arrow4" src="images/arrow_drop_down_FILL.png"
+                                                    style=" cursor: pointer; position: absolute; top: 40%; right: 2%;" />
+                                                <div id="DBDropdown" class="w-100">
+                                                    <div value="1" class="mb-2">Netherland</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="fw-bold mb-1 mt-2">Currency and time zone</p>
+                                            <div style="position: relative; width: 100%; ">
+                                                <input
+                                                    style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                                    placeholder="(GMT +2:00) Amst.." />
+                                                <img onclick="togglediv('CEdropdown'); rotateArrow('arrow8');"
+                                                    id="arrow8" src="images/arrow_drop_down_FILL.png"
+                                                    style=" cursor: pointer; position: absolute; top: 40%; right: 2%;" />
+                                                <div id="CEdropdown" class="w-100">
+                                                    <div value="1" class="mb-2">Netherland</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="fw-bold mb-1 mt-3">Business Name</p>
+                                    <input
+                                        style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                        placeholder="Add name" />
+                                    <p style="opacity: 0.5; font-weight: bold; margin-top: 0.5em;">Enter your legal name
+                                        if you dont have a business name.</p>
+                                    <p class="fw-bold mb-1 mt-3">Business Address</p>
+                                    <input
+                                        style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                        placeholder="Street address 1" />
+                                    <input
+                                        style=" margin-top: 0.5em; padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                        placeholder="Street address 2" />
+                                    <input
+                                        style=" margin-top: 0.5em; padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                        placeholder="Town or City" />
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        <input
+                                        style=" margin-top: 0.5em; padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 45%;"
+                                        placeholder="State or Region" />
+                                        <input
+                                        style=" margin-top: 0.5em; padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 45%;"
+                                        placeholder="Zip Code" />
+                                    </div>
+                                    <p class="fw-bold mb-1 mt-3">EU VAT number</p>
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        <div style="position: relative; width: 40%; ">
+                                            <input
+                                                style="padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 100%;"
+                                                placeholder="Country" />
+                                            <img onclick="togglediv('SPdropdown'); rotateArrow('arrow7');"
+                                                id="arrow7" src="images/arrow_drop_down_FILL.png"
+                                                style=" cursor: pointer; position: absolute; top: 40%; right: 2%;" />
+                                            <div id="SPdropdown" class="w-100">
+                                                <div value="1" class="mb-2">Netherland</div>
+                                            </div>
+                                        </div>
+                                        <input
+                                        style="  padding: 0.5em 0.8em; border-radius: 10px; border: 1px solid #f1eaea; width: 58%;"
+                                        placeholder="VAT (Optional)" />
+                                    </div>
+                                    <p class="fw-bold mb-1 mt-3">Advertising Purpose</p>
+                                    <div class="column text-start">
+                                        <div class="mb-2">
+                                            <input type="radio" name="paymentMethod" />
+                                            <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                                Yes, I am buying ads for business purpose</label>
+                                        </div>
+                                        <div class="mb-2">
+                                            <input type="radio" name="paymentMethod" />
+                                            <label style=" font-weight: lighter; color: #000; margin: 0px 1em;">
+                                                No, I am not buying ads for business purpose
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-end align-items-center">
+                                        <div onclick="togglediv('BusinessInfoPopup')" class="mx-5" style=" cursor: pointer; color: #131C61; font-weight: bold;">
+                                            Cancel
+                                        </div>
+                                        <button
+                                            style=" border: none; padding: 0.8em 1.5em; background-color: #4CDA4F; border-radius: 10px; color: #fff; font-weight: bold;">
+                                            Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold row my-2" style="font-size: 1.2vw;">
+                                    <div class="col-6">Business Name</div>
+                                    <div class="col-6">Address</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-6">Infotech</div>
+                                    <div class="col-6">Netherland</div>
+                                </div>
+                                <div class="fw-bold row my-2 mt-5" style="font-size: 1.2vw;">
+                                    <div class="col-6">Currency</div>
+                                    <div class="col-6">Tax ID</div>
+                                </div>
+                                <div class=" row my-2">
+                                    <div class="col-6">-</div>
+                                    <div class="col-6"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-5">
+                        <div class="box-template mb-3" style="border: none; background-color: #d8f5d6;">
+                            <p style="color: #131C61; font-weight: bold;">Payment History</p>
+                            <div style=" margin-top: 0.8em; font-weight: 500; ">
+                                <img style="width: 2em;" src="images/download_FILL0_wght400_GRAD0_opsz48.svg" />
+                                <span class="mx-2">Download last reciept</span>
+                            </div>
+                        </div>
+                        <div class="box-template mb-3 " style=" border: none; background-color: #d8f5d6;">
+                            <p style="color: #131C61; font-weight: bold;">Help Center</p>
+                            <div style=" margin-top: 0.8em; font-weight: 500; ">
+                                <img style="width: 2em;" src="images/help_FILL0_wght400_GRAD0_opsz48.svg" />
+                                <span class="mx-2">Help</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function rotateArrow(id) {
+            var div = document.getElementById(id);
+            div.style.transform = 'rotate(180deg)';
+
+        }
+    </script>
+
+    <script src="script.js">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

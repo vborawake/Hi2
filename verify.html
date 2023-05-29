@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="loginLanding">
+        <div class="signupLeftLanding" style="position: relative;">
+            <div class="loginLandingDiv">
+                <img src="images/logo.png" width="200px" />
+                <h6 class="loginLandingHead4">Create an Account</h6>
+            </div>
+            <div class="appleStoreSignup">
+                <img src="images/play.png" alt="play" width="80px" class="appleStoreImg">
+                <img src="images/apple.png" alt="apple" width="80px" class="appleStoreImg">
+            </div>
+        </div>
+        <div class="form">
+            <div>
+                <p class="userText">Verification Code</p>
+            </div>
+            <div class="formPageUp">
+                <img src="images/tick.png" alt="">
+            </div>
+
+            <div>
+                <p class="legalPara">
+                    Enter the verification code send to your mobile number: <span class="termsand">8989898989</span>
+                </p>
+            </div>
+            <div class="otpDiv">
+                <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+                    <input class="otp-input" type="text" class="inputOtp" id="digit-1" name="digit-1" data-next="digit-2" style="font-size: 1.5rem; padding-left: 1.3rem;">
+                    <input class="otp-input" type="text" class="inputOtp" id="digit-2" name="digit-2" data-next="digit-3"
+                        data-previous="digit-1" style="font-size: 1.5rem; padding-left: 1.3rem;">
+                    <input class="otp-input" type="text" class="inputOtp" id="digit-3" name="digit-3" data-next="digit-4"
+                        data-previous="digit-2" style="font-size: 1.5rem; padding-left: 1.3rem;">
+                    <input class="otp-input" type="text" class="inputOtp" id="digit-4" name="digit-4" data-next="digit-5"
+                        data-previous="digit-3" style="font-size: 1.5rem; padding-left: 1.3rem;">
+                    <input class="otp-input" type="text" class="inputOtp" id="digit-5" name="digit-5" data-next="digit-6"
+                        data-previous="digit-4" style="font-size: 1.5rem; padding-left: 1.3rem;">
+                </form>
+            </div>
+            <div class="timeDiv">
+                <p>00:20</p>
+                <p>Resend Code</p>
+            </div>
+            <div>
+                <button class="verifyBtn">
+                    <a href="ads-dashboard.html"
+                            style="color: #131C61; border: none; text-decoration: none;">
+                            
+                    Verify
+                    </a>
+                </button>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+        $('.digit-group').find('input').each(function () {
+            $(this).attr('maxlength', 1);
+            $(this).on('keyup', function (e) {
+                var parent = $($(this).parent());
+
+                if (e.keyCode === 8 || e.keyCode === 37) {
+                    var prev = parent.find('input#' + $(this).data('previous'));
+
+                    if (prev.length) {
+                        $(prev).select();
+                    }
+                } else if ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 65 && e.keyCode <= 90) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode === 39) {
+                    var next = parent.find('input#' + $(this).data('next'));
+
+                    if (next.length) {
+                        $(next).select();
+                    } else {
+                        if (parent.data('autosubmit')) {
+                            parent.submit();
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

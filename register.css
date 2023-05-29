@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
+* {
+ font-family: 'Nunito', sans-serif;
+}
+p {
+  margin-bottom: 0 !important;
+}
+/* .myNavbar {
+  height: 81px;
+} */
+.navbar{
+  /* filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 )) !important; */
+
+  box-shadow: 0 15px 15px -15px rgba(0,0,0,0) !important;
+  padding: 0em 0px !important;
+}
+.nav-link{
+  font-size: 1.3em !important;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.rosy {
+  font-weight: 700;
+  padding-left: 0.4rem;
+}
+.form-label{
+  color: black;
+  font-weight: bold;
+  font-size: 1.3vw;
+}
+.form2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 63%;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  padding: 2rem 0;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+  border-radius: 10px;
+  padding-top: 4em;
+filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+
+background: #ffffff
+  /* box-shadow: 0 0 5pt 2pt #d3d3d3; */
+}
+.formDbPara {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5vw;
+  width: 100%;
+  color: black;
+  margin-bottom: 2rem !important;
+}
+#exampleFormControlInput1{
+  padding: 1.8em;
+  border-radius: 10px;
+}
+::placeholder {
+  color: black;
+  font-size: 1.3em;
+}
+.form3 {
+  width: 42%;
+  position: relative;
+  /* height: 1569px; */
+  /* background-color: #b8e994; */
+  padding-left:4rem;
+}
+.formSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginLanding {
+  background: linear-gradient(180deg, 
+#f1eaea 0.00%, 
+#f3eded 48.53%, 
+#ffffff 100.00%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding-top: 4em;
+  
+}
+/* .navbar-button {
+  background: #131C61;
+  border: none;
+  color: #ffffff;
+  padding: 0em 1em;
+  border-radius: 10px;
+  font-size: 1.3em;
+  margin: 0.2em 0px;
+} */
+/* .navbar-button {
+  background: #130f40;
+  border: none;
+  color: #ffffff;
+  width: 124px;
+  font-weight: 700;
+  border-radius: 4px;
+  height: 40px;
+} */
+
+.searchInput {
+  border: none;
+  background: transparent;
+}
+.formLabel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.formDb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 1rem;
+  width: 90%;
+}
+.cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #D9F8D9;
+  width: 90%;
+  padding: 2rem 2.5rem;
+  font-weight: bold;
+  color: #7B7878;
+  margin-top: 2.5rem;
+  font-size: 1.8vw;
+}
+.card {
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+ border:none !important;
+ border-radius: 0px !important;
+  /* height: 200px; */
+  margin: 3em 0px !important;
+  width: 90%;
+}
+.card-header {
+  padding:  1.8em  1.5em!important;
+  border-radius: 0px !important;
+  background: #D9F8D9 !important;
+  font-size: 1.8vw;
+  font-weight: bold;
+  border-bottom: none !important;
+  color: #7B7878 !important;
+}
+.cartNice {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  color: black;
+  font-size: 1.3vw;
+  font-weight: 500;
+
+  /* margin-top: 1rem; */
+  padding: 0px 2.5rem;
+}
+.cartCoupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 87%;
+  margin-top: 1rem;
+}
+.cartCoupon2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.cartCouponLeft {
+  background: #e6ffe6;
+  padding: 1rem 2.5rem;
+  width: 300px;
+  padding-bottom: 2rem;
+}
+.card {
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 1.5em !important;
+  border: 1px solid grey;
+}
+.card-header {
+  background: #e6ffe6;
+  padding: 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* height: 55px; */
+  font-size: 1vw ;
+  /* color: #7B7878; */
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+.privacyTerms {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.loginLastStep {
+  font-size: 3.3vw;
+  font-weight: 700;
+  position: relative;
+  z-index: 9;
+}
+.last-step-text{
+  padding: 1.2em;
+  padding-left: 0%;
+  padding-right: 2em;
+  color: #131C61;
+  font-size: 2.3vw;
+}
+.cartCouponLeftPara {
+  padding: 0.7rem 0;
+  font-size: 1.3vw;
+  font-weight: 500;
+}
+.cartCouponRightPara {
+  padding: 0.7rem 1.3rem;
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+.applyCoupon {
+  background: #4CDA4F;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2.3vw;
+  /* width: 238px; */
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 700;
+  /* height: 50px; */
+}
+.cardMonthNUmber {
+  opacity: 0.6;
+  /* font-size: 13px; */
+}
+.cardMonthDate {
+  opacity: 0.6;
+  /* font-size: 13px; */
+  margin-left: 0.3rem;
+}
+input[type="email"],
+input[type="text"] {
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+  border-color: #f1eaea;
+  border-radius: 8px;
+  height: 50px;
+}
+.applyCouponDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1.5em;
+}
+.firstLast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+}
+.letsStart {
+  background: #131C61;
+  color: #ffffff;
+  border-radius: 20px !important;
+  padding: 0.6rem;
+  border: none;
+  padding: 0.5em 3.5em;
+  width: 100%;
+  /* height: 65px; */
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 2.5vw;
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+}
+.card-month {
+  display: flex;
+}
+.inputText {
+  width: 50% !important;
+}
+.card-title {
+  padding: 1em;
+  font-size: 15px;
+}
+.formBorder {
+  border-color: #131c61;
+  border-width: 1px;
+  border-style: dashed;
+  padding: 2rem 1.3rem;
+}
+@media (max-width: 767px) {
+  .loginLanding {
+    flex-direction: column;
+  }
+  .form3 {
+    height: auto;
+    width: auto;
+    padding-top: 2rem;
+  }
+  .form2 {
+    height: auto;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .applyCouponDiv {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+  }
+  .formDb {
+    width: 350px;
+  }
+  .cart,
+  .cartNice,
+  .cartCoupon {
+    width: 84%;
+  }
+  .cartCoupon {
+    flex-direction: column;
+  }
+  .cartCoupon2 {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 1rem;
+  }
+  .card,
+  .privacyTerms {
+    width: 82%;
+  }
+  .letsStart {
+    width: 343px;
+  }
+  .cartCouponLeft {
+    width: 341px;
+  }
+  .myNavbar {
+    height: auto;
+  }
+  .applyCoupon {
+    margin-top: 1rem;
+  }
+  .firstLast {
+    flex-direction: column;
+  }
+  .inputText{
+    width: 100% !important;
+  }
+  .applyCoupon {
+    width: 302px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .loginLanding {
+    flex-direction: column;
+  }
+  .form3 {
+    height: auto;
+    width: auto;
+    padding-top: 2rem;
+  }
+  .form2 {
+    height: auto;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+  .applyCouponDiv {
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+  }
+  .formDb {
+    width: 350px;
+  }
+  .cart,
+  .cartNice,
+  .cartCoupon {
+    width: 44%;
+  }
+  .cartCoupon {
+    flex-direction: column;
+  }
+  .cartCoupon2 {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 1rem;
+  }
+  .card,
+  .privacyTerms {
+    width: 42%;
+  }
+  .letsStart {
+    width: 343px;
+  }
+  .cartCouponLeft {
+    width: 341px;
+  }
+  .myNavbar {
+    height: auto;
+  }
+  .applyCoupon {
+    margin-top: 1rem;
+  }
+}

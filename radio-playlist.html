@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="radio-media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light myNavbar">
+        <div class="container-fluid">
+            <img src="images/logo.png" width="100px" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <div class="profile-col navbarRight px-4">
+                    <img src="images/profile-pic.jpg" class="profile-pic mx-3" />
+                    <span class="fw-bold text-white">Rosy Radio</span>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="media-dashboard d-flex flex-row justify-content-end p-5">
+        <div class="radio-side-navbar">
+            <div style="gap: 5%; background-color: #f1eaea; "
+                class=" side-bar-top-div d-flex flex-row justify-content-start align-items-center ">
+                <div style="background-color: #4cd137; border-radius: 10px; padding: 0.5em;">
+                    <img src="images/dash.png" style="width: 2.5em;" />
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="fw-bold">Joy Radio</div>
+                    <div>08:20 PM GMT</div>
+                </div>
+            </div>
+            <div class="p-2 d-flex flex-column  justify-content-center align-items-start">
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-dashboard-lay.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">
+                        <a href="dashboard.html" style="color: black;">Dashboard</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-person-24.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="radio-profile.html" style="color: black; font-size: 1.4vw;">Profile</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-song-32.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="radio-media.html" style="color: black; font-size: 1.4vw;">Media</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-playlist-24.png" />
+                    <div class="fw-bold mx-3" style="color: #131C61; font-size: 1.4vw;">Playlist</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-radio-tower-1.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Broadcast</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-estimate-24.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Subscription</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-statistic-doc.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Report</div>
+                </div>
+            </div>
+        </div>
+        <div class=" media-right-side ">
+            <div class="box-template p-0" id="PlaylistDiv" style="width: 75vw;">
+                <div class="radiobox-header fw-bold" style="font-size: 1.5vw;">Playlists</div>
+                <div class="mx-3">
+                    <div class="d-flex flex-row justify-content-start align-items-center my-3" style="gap:3%;">
+                        <button style="padding: 0.5em 2em;" class="blue-button">All Playlist</button>
+                        <button onclick=" hideDiv('PlaylistDiv'); showdiv('ScheduleTime');"
+                            style="background-color: white; color: #131C61; border: 1px solid #131C61; border-radius: 10px; padding:0.5em 0.8em;">
+                            Schedule View
+                        </button>
+                    </div>
+                    <p style="color: #da8a4c;" class="fw-bold"> <img src="images/library_add_FILL0_wg.png" />
+                        <span class="mx-3">Add Playlist</span>
+                    </p>
+                </div>
+                <div class="w-100 d-flex flex-row justify-content-between align-items-center px-3">
+                    <div class=" position-relative  my-4" style="width: 73%;">
+                        <input class="box-template w-100 " placeholder="Search" />
+                        <img src="images/search_FILL0_wght400.png" style="position: absolute; right: 2%; top: 40%;" />
+                    </div>
+                    <div style="width: 23%;"
+                        class="  box-template d-flex flex-row justify-content-between align-items-center">
+                        <img src="images/refresh_FILL0_wght40.png" />
+                        <div>
+                            All
+                            <img src="images/arrow_drop_down_FILL.png" />
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: #f1eaea; color: black;"
+                    class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-row col-3">
+                        Name
+                    </div>
+                    <div class="d-flex flex-row col-4">
+                        Type
+                    </div>
+                    <div class="d-flex flex-row col-2">
+                        Duration
+                    </div>
+                    <div class="d-flex flex-row col-2">
+                        Settings
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        Delete
+                    </div>
+                </div>
+                <div style=" color: black;"
+                    class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-row col-3">
+                        <a href="#" style="text-decoration: underline; color: #131C61;">default</a>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start col-4">
+                        <div>General rotation</div>
+                        <button class=" fw-bold p-1"
+                            style="background-color: #D9F8D9; font-size: 0.7em; border: none; border-radius: 10px;">
+                            Shuffle
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row col-2">
+                        0:00 seconds
+                    </div>
+                    <div class="d-flex flex-row col-2">
+                        <img onclick="togglediv('editPlaylistPopup');" src="images/edit_square_FILL0_wg-grey.png" />
+                    </div>
+                    <div id="editPlaylistPopup" class="box-template p-0">
+                        <div class="text-start fw-bold p-4">Edit Playlist</div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div onclick="showdiv('SettingDiv'); hideDiv('Schedule');"
+                                style="text-align: center; width: 50%; color: #131C61; border-bottom: 3px solid #131C61;">
+                                Setting
+                            </div>
+                            <div onclick="showdiv('ScheduleDiv'); hideDiv('SettingDiv');"
+                                style="text-align: center; width: 50%; color: #888888; border-bottom: 3px solid #888888;">
+                                Schedule
+                            </div>
+                        </div>
+                        <div id="SettingDiv" class="row p-4">
+                            <div class="col-7" style="border-right: 2px solid #888888;">
+                                <p>Playlist name</p>
+                                <input type="text" placeholder="default" class="w-100 box-template" />
+                                <div class="my-4">
+                                    <p>Playback Type</p>
+                                    <div
+                                        class="box-template d-flex flex-row justify-content-between align-items-center ">
+                                        <div>Standard</div>
+                                        <img src="images/arrow_drop_down_FILL.png" />
+                                    </div>
+                                </div>
+                                <p>PLayback order</p>
+                                <div
+                                    class="p-0 box-template d-flex flex-row justify-content-between align-items-center">
+                                    <div
+                                        class="blue-button m-0 d-flex flex-row justify-content-between align-items-center">
+                                        Shuffle
+                                        <img style="width: 1.2em;" src="images/icons8-shuffle-24.png" />
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        Sequential
+                                        <img src="images/icons8-tune-60.png" style="width: 1.2em;" />
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        Random
+                                        <img style="width: 1.2em;" src="images/icons8-shuffle-24.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 pt-5 px-3" style="font-size: 0.9em;">
+                                <div class="mb-4">
+                                    <img src="images/check_circle_FILL0_w.png" />
+                                    Enabled
+                                </div>
+                                <div class="my-4">
+                                    <img src="images/check_circle_FILL0_w.png" />
+                                    Avoid duplicate Artist/title
+                                </div>
+                                <div class="my-4">
+                                    <img src="images/radio_button_uncheck.png" />
+                                    On demand availibility
+                                </div>
+                                <div class="my-4">
+                                    <img src="images/radio_button_uncheck.png" />
+                                    Jingles/ads more
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ScheduleDiv" class="p-4" style="display: none;">
+                            <button class="green-btn">Create new</button>
+                            <p class="fw-bold my-2"> Schedule Time</p>
+                            <div class="my-3 d-flex flex-row align-items-center justify-content-start">
+                                <div class="d-flex flex-column">
+                                    <div>Start Time</div>
+                                    <input type="time" class="box-template" />
+                                </div>
+                                <div class="d-flex flex-column mx-3">
+                                    <div>End Time</div>
+                                    <input type="time" class="box-template" />
+                                </div>
+                            </div>
+                            <div>
+                                <p class="fw-bold">Days</p>
+                                <div
+                                    class="w-75 d-flex flex-row justify-content-between align-items-center box-template">
+                                    <div>Mon</div>
+                                    <div>Tue</div>
+                                    <div>Wed</div>
+                                    <div>Thu</div>
+                                    <div>Fri</div>
+                                    <div>Sat</div>
+                                    <div>Sun</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-2 d-flex flex-row justify-content-end align-items-center">
+                            <div onclick="togglediv('editPlaylistPopup');"
+                                style="color: #131C61; width: 25%; text-align: center;">Close</div>
+                            <button class="blue-button" style="width: 25%;">Save</button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <img src="images/delete_FILL0_wght400-grey.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="box-template p-0" id="ScheduleTime" style="width: 75vw;">
+                <div class="radiobox-header d-flex flex-row justify-content-between align-items-centerfw-bold"
+                    style="font-size: 1.5vw;">
+                    <div>
+                        <span>Schedule</span>
+                        <span style="opacity: 0.7;" onclick=" hideDiv('ScheduleTime'); showdiv('PlaylistDiv');"
+                            class="mx-3">Playlists</span>
+                    </div>
+                    <div class="align-items-center">February 2023 <img style="width: 1.2em;"
+                            src="images/calendar_month_FILL0_wght400_GRAD0_opsz48.svg" /></div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <div style="width: 10%; text-align: end;"><img src="images/arrow_drop_down_FILL.png"
+                            style="transform: rotate(90deg);" /></div>
+                    <div style="width: 10%; text-align: center;">Sun 20/02</div>
+                    <div style="width: 10%; text-align: center;">Mon 21/02</div>
+                    <div style="width: 10%; text-align: center;">Tue 22/02</div>
+                    <div style="width: 10%; text-align: center;">Wed 23/02</div>
+                    <div style="width: 10%; text-align: center;">Thu 24/02</div>
+                    <div style="width: 10%; text-align: center;">Fri 25/02</div>
+                    <div style="width: 10%; text-align: center;">Sat 26/02</div>
+                    <div style="width: 10%; text-align: center;">Sun 27/02</div>
+                    <div style="width: 10%; text-align: start;"><img src="images/arrow_drop_down_FILL.png"
+                            style="transform: rotate(270deg);" /></div>
+                </div>
+                <div style="gap: 1%;" class="d-flex flex-row align-items-startjustify-content-start">
+                    <div class="d-flex flex-column " style="width: 10%; text-align: end;">
+                        <div class="py-1">12 am</div>
+                        <div class="py-1">1 am</div>
+                        <div class="py-1">2 am</div>
+                        <div class="py-1">3 am</div>
+                        <div class="py-1">4 am</div>
+                        <div class="py-1">5 am</div>
+                        <div class="py-1">6 am</div>
+                        <div class="py-1">7 am</div>
+                        <div class="py-1">8 am</div>
+                        <div class="py-1">9 am</div>
+                        <div class="py-1">10 am</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-start"
+                        style="width: 10%; text-align: center; height: 100%;">
+                        <div style="background-color: #f1eaea; height: 10em;">12:00-4:00 Slow rock</div>
+                        <div style="background-color: #f5cbcc; height: 6em;">5:00-8:00 Morning routiens</div>
+                        <div style="background-color: #bbdef4; height: 6em;">8:00-1:00 Podcast</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color: #d8f5d6; height: 8em;">12:00-3:00 Dowm tempo</div>
+                        <div style="background-color: #efbf97; height: 10em;">4:00-9:00 New gems</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color:#f3f6bd ; height: 10em;">12:00-5:00 Midnight to morning</div>
+                        <div style="background-color: #f5cbcc; height: 6em;">5:00-8:00 Morning routiens</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color: #d8f5d6; height: 8em;">12:00-3:00 Dowm tempo</div>
+                        <div style="background-color: #efbf97; height: 10em;">4:00-9:00 New gems</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color:#f3f6bd ; height: 10em;">12:00-5:00 Midnight to morning</div>
+                        <div style="background-color: #f5cbcc; height: 6em;">5:00-8:00 Morning routiens</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color: #d8f5d6; height: 8em;">12:00-3:00 Dowm tempo</div>
+                        <div style="background-color: #efbf97; height: 10em;">4:00-9:00 New gems</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start align-items-start"
+                        style="width: 10%; text-align: center;">
+                        <div style="background-color:#f3f6bd ; height: 10em;">12:00-5:00 Midnight to morning</div>
+                        <div style="background-color: #f5cbcc; height: 6em;">5:00-8:00 Morning routiens</div>
+                    </div>
+                    <div class="d-flex flex-column align-items-start"
+                        style="width: 10%; text-align: center; height: 100%;">
+                        <div style="background-color: #f1eaea; height: 10em;">12:00-4:00 Slow rock</div>
+                        <div style="background-color: #f5cbcc; height: 6em;">5:00-8:00 Morning routiens</div>
+                        <div style="background-color: #bbdef4; height: 6em;">8:00-1:00 Podcast</div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center"
+                        style="width: 10%; text-align: center;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+        function showdiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "block";
+        }
+
+        function hideDiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "none";
+        }
+    </script>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <title>Signup</title>
+</head>
+
+<body>
+    <section class="loginLanding">
+        <div class="signupLeftLanding" style="position: relative;">
+            <div class="loginLandingDiv">
+                <img src="images/logo.png" width="200px" />
+                <h6 class="loginLandingHead4">Create an Account</h6>
+            </div>
+            <div class="appleStoreSignup">
+                <img src="images/play.png" alt="play" width="50px" class="appleStoreImg">
+                <img src="images/apple.png" alt="apple" width="50px" class="appleStoreImg">
+            </div>
+        </div>
+        <div class="form">
+            <div class="user">
+                <img src="images/signup-icon.png" />
+                <!-- <i class="fa-regular fa-user" style="font-size: 70px; color: #70a1ff;"></i> -->
+            </div>
+            <div class="formName">
+                <input type="text"  placeholder="First Name" class="signup-input">
+                <input type="text" placeholder="Last Name" class="lastName signup-input">
+            </div>
+            <div>
+                <input type="email" placeholder="Email" class="signup-input">
+            </div>
+            <div>
+                <input type="password" placeholder="password" class="signup-input">
+            </div>
+            <div class="phoneDiv" >
+                <select class="form-select phoneData signup-input" aria-label="Default select example">
+                    <option selected>+91</option>
+                    <option value="1">+61</option>
+                    <option value="2">+81</option>
+                    <option value="3">+11</option>
+                </select>
+
+                <input type="text" placeholder="Mobile Number" class="mobileNumber signup-input">
+            </div>
+            <div>
+                <select class="form-select selectData signup-input" aria-label="Default select example">
+                    <option selected>Country</option>
+                    <option value="1">India</option>
+                    <option value="2">Australia</option>
+                    <option value="3">Russia</option>
+                </select>
+            </div>
+            <div class="form-radio">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check" style="margin-left: 40px;">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Female
+                    </label>
+                </div>
+            </div>
+            <div>
+                <p class="legalPara">
+                    By clicking Sign Up, you agree to our <span class="termsand">Terms, Privacy Policy and Cookies Policy</span> 
+                </p>
+            </div>
+            <div>
+                <button class="signBtn">
+                    <a href="verify.html"
+                            style="color: #131C61; border: none; text-decoration: none;">
+                            Sign Up</a>
+                        
+                </button>
+                <p class="alreadyAccount2">Already have an account? <span class="alreadyAccountSpan2">Log In</span></p>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</body>
+
+</html>

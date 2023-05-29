@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="radio-media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light myNavbar">
+        <div class="container-fluid">
+            <img src="images/logo.png" width="100px" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- <div class="navbarRight">
+                    <p class="navbarRightText">
+                        <i class="fa-solid fa-user"></i>
+                    </p>
+                    <p class="navbarRightText">Joy Radio</p>
+                </div> -->
+                <div class="profile-col navbarRight px-4">
+                    <img src="images/profile-pic.jpg" class="profile-pic mx-3" />
+                    <span class="fw-bold text-white">Rosy Radio</span>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="media-dashboard d-flex flex-row justify-content-end p-5">
+        <div class="radio-side-navbar">
+            <div style="gap: 5%; background-color: #f1eaea; "
+                class=" side-bar-top-div d-flex flex-row justify-content-start align-items-center ">
+                <div style="background-color: #4cd137; border-radius: 10px; padding: 0.5em;">
+                    <img src="images/dash.png" style="width: 2.5em;" />
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="fw-bold">Joy Radio</div>
+                    <div>08:20 PM GMT</div>
+                </div>
+            </div>
+            <div class="p-2 d-flex flex-column  justify-content-center align-items-start">
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-dashboard-lay.png" />
+                    <div class="fw-bold mx-3" style="font-size: 1.4vw;">
+                        <a href="dashboard.html" style="color: black;">Dashboard</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-person-24.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">
+                        <a href="radio-profile.html" style="color: black;">Profile</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-song-32.png" />
+                    <div class="fw-bold mx-3" style="color: #131C61; font-size: 1.4vw;">Media</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-playlist-24.png" />
+                    <div>
+                        <a href="radio-playlist.html" class="fw-bold mx-3"
+                            style="color: black; font-size: 1.4vw;">Playlist</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-radio-tower-1.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Broadcast</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-estimate-24.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Subscription</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-statistic-doc.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Report</div>
+                </div>
+            </div>
+        </div>
+        <div class=" media-right-side ">
+            <div class="box-template p-0" style="width: 75vw;">
+                <div class="radiobox-header fw-bold" style="font-size: 1.5vw;">Music Files</div>
+                <div class="mx-3">
+                    <p class="my-3 d-flex flex-row justify-content-start align-items-center "
+                        style="color: #da8a4c; font-weight: bold;">
+                        Home <span id="insideNightTrack"> &lt; Night Track</span>
+                    </p>
+                    <div id="showFilesToUpload" class="col my-3">
+                        <div class="d-flex flex-column justify-content-center">
+                            <label for="file"
+                                style="color: #131C61; font-weight: bold; font-size: 1.3vw;">Marion-high-hopes.mp3</label>
+                            <progress id="file" value="32" max="100"></progress>
+                            <p style="font-size: 0.7em;">8.13 MB</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <label for="file"
+                                style="color: #131C61; font-weight: bold; font-size: 1.3vw;">resonance-haven.mp3</label>
+                            <progress id="file" value="58" max="100"></progress>
+                            <p style="font-size: 0.7em;">28.13 MB</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <label for="file"
+                                style="color: #131C61; font-weight: bold; font-size: 1.3vw;">Oscure.mp3</label>
+                            <progress id="file" value="78" max="100"></progress>
+                            <p style="font-size: 0.7em;">48.13 MB</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <label for="file"
+                                style="color: #131C61; font-weight: bold; font-size: 1.3vw;">Noyn.mp3</label>
+                            <progress id="file" value="60" max="100"></progress>
+                            <p style="font-size: 0.7em;">38.13 MB</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <label for="file"
+                                style="color: #131C61; font-weight: bold; font-size: 1.3vw;">Aurore-night.mp3</label>
+                            <progress id="file" value="32" max="100"></progress>
+                            <p style="font-size: 0.7em;">8.13 MB</p>
+                        </div>
+                    </div>
+                    <div class="p-2 d-flex flex-row justify-content-center align-items-center"
+                        style="border: 3px dashed #7B7878;">
+                        <span>Drag files here to upload or</span>
+                        <label class="label" style="width: 7em;">
+                            <input accept=".mp3,audio/*" type="file" id="upload" style="visibility: hidden;"
+                                required>
+                            <div onclick="
+                            // showdiv('showFilesToUpload'); 
+                            hideDiv('nofolder'); 
+                            showdiv('showSongs'); 
+                            hideDiv('newfolder');" 
+                             class="blue-button">Select files
+                                <!--  -->
+                            </div>
+                        </label>
+
+                    </div>
+                </div>
+                <div
+                    class="position-relative fw-bold text-black mx-3 mt-5 mb-3 d-flex flex-row justify-content-start align-items-center">
+                    <div class="d-flex flex-row ">
+                        <img src="images/folder_FILL0_wght400.png" />
+                        <div class="mx-2" onclick="togglediv('folderPopup')" style="cursor: pointer;">New Folder</div>
+                    </div>
+                    <div onclick="togglediv('playlistPopup'); changeStyle('playlistdiv')" id="playlistdiv"
+                        style="cursor: pointer; border-radius: 10px; padding: 1em; background-color: white;"
+                        class=" d-flex flex-row mx-4 align-items-center">
+                        <img src="images/icons8-playlist-24.png" />
+                        <div class="mx-2">Playlist</div>
+                        <img style="height: 1em;" src="images/arrow_drop_down_FILL.png" />
+
+                    </div>
+
+                    <button style="background-color: white; border:2px solid #CF1E24; border-radius: 10px;"
+                        class="p-1 d-flex flex-row">
+                        <img src="images/delete_FILL0_wght400.png" />
+                        <div class="mx-2" style="color: #CF1E24;">Delete</div>
+                    </button>
+                </div>
+                <div class=" flex-column justify-content-start align-items-start playlistPopup" id="playlistPopup"
+                    style=" background-color: #D9F8D9; border-radius: 10px;">
+                    <div class="d-flex flex-row justify-content-start align-items-center">
+                        <img src="images/radio_button_uncheck.png" />
+                        <span class="mx-3">default</span>
+                    </div>
+                    <div class="my-3 d-flex flex-row justify-content-between align-items-center">
+                        <img src="images/check_circle_FILL0_w.png" />
+                        <button class="mx-3"
+                            style=" padding: 0.5em; font-size: 0.8em; padding-right: 4em; background-color: white; border: none; border-radius: 10px;">
+                            New Playlist
+                        </button>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div style="color: #131C61; width: 45%; text-align: center;">Clear</div>
+                        <button class="blue-button" style="width: 45%;">Save</button>
+                    </div>
+                </div>
+                <div id="folderPopup" class="box-template">
+                    <p class="fw-bold text-black">New Directory</p>
+                    <p class="fw-bold text-grey">Directory name</p>
+                    <input class="box-template w-100 mb-5" />
+                    <div style="gap: 3%;" class="px-3 pb-1 d-flex flex-row justify-content-end align-items-center">
+                        <button style="color: #131C61; border: none; background-color: white;"
+                            onclick="togglediv('folderPopup')">Close</button>
+                        <button class="blue-button px-4"
+                            onclick="togglediv('folderPopup'); showdiv('newfolder'); hideDiv('nofolder')">Create</button>
+                    </div>
+                </div>
+                <div class="mx-3 position-relative my-4">
+                    <input class="box-template w-100" placeholder="Search" />
+                    <img src="images/search_FILL0_wght400.png" style="position: absolute; right: 2%; top: 40%;" />
+                </div>
+                <div style="background-color: #f1eaea; color: black;"
+                    class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-center">
+                    <div class="d-flex flex-row col-4">
+                        <img src="images/radio_button_uncheck.png" />
+                        <div class="mx-1">Name</div>
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Title</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Artist</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Album</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Length</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Playlists</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+                    <div class="d-flex flex-row col-1">
+                        <div class="mx-1">Actions</div>
+                        <img src="images/icons8-sort-24 (1).png" />
+                    </div>
+
+                </div>
+                <div class="text-center my-5 fw-bold" id="nofolder">No records to display</div>
+                <div id="newfolder" class="pt-3 pb-5 px-3">
+                    <div class="w-100 d-flex flex-row justify-content-between">
+                        <div class="d-flex flex-row justify-content-start align-items-start">
+                            <img src="images/check_circle_FILL0_w.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/folder_FILL0_wght400.png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <a onclick="showdiv('insideNightTrack'); showdiv('nofolder'); hideDiv('newfolder')"
+                                        style="color: #4cd137; text-decoration: underline;">Night Track</a>
+                                    <div style="font-size: 0.8em;">Directory</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img style="height: 1.4em;" src="images/edit_square_FILL0_wg.png" />
+                    </div>
+                </div>
+                <div class="my-3" id="showSongs">
+                    
+                    <audio id="audio" controls>
+                        <source src="" id="src" />
+                    </audio>
+                    <!-- <div style="color: black;"
+                        class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-start">
+                        <div class="d-flex flex-row justify-content-start align-items-start col-4">
+                            <img src="images/radio_button_uncheck.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/NoPath.png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <div>Marions-high-hopes.mp3</div>
+                                    <div style="font-size: 0.8em;">James</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  col-1">
+                            <div class="mx-1">Lost</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">James</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">2:30</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end col-1">
+                            <img src="images/play_circle_FILL0_wg.png" />
+                            <img src="images/edit_square_FILL0_wg.png" />
+                        </div>
+
+                    </div>
+                    <div style="color: black;"
+                        class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-start">
+                        <div class="d-flex flex-row justify-content-start align-items-start col-4">
+                            <img src="images/radio_button_uncheck.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/NoPath - Copy (4).png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <div>Oscure.mp3</div>
+                                    <div style="font-size: 0.8em;">James</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  col-1">
+                            <div class="mx-1">Lost</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">James</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">2:30</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end col-1">
+                            <img src="images/play_circle_FILL0_wg.png" />
+                            <img src="images/edit_square_FILL0_wg.png" />
+                        </div>
+
+                    </div>
+                    <div style="color: black;"
+                        class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-start">
+                        <div class="d-flex flex-row justify-content-start align-items-start col-4">
+                            <img src="images/radio_button_uncheck.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/NoPath - Copy (3).png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <div>Noyn.mp3</div>
+                                    <div style="font-size: 0.8em;">James</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  col-1">
+                            <div class="mx-1">Lost</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">James</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">2:30</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end col-1">
+                            <img src="images/play_circle_FILL0_wg.png" />
+                            <img src="images/edit_square_FILL0_wg.png" />
+                        </div>
+
+                    </div>
+                    <div style="color: black;"
+                        class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-start">
+                        <div class="d-flex flex-row justify-content-start align-items-start col-4">
+                            <img src="images/radio_button_uncheck.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/NoPath - Copy (2).png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <div>Aurore-night.mp3</div>
+                                    <div style="font-size: 0.8em;">James</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  col-1">
+                            <div class="mx-1">Lost</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">James</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">2:30</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end col-1">
+                            <img src="images/play_circle_FILL0_wg.png" />
+                            <img src="images/edit_square_FILL0_wg.png" />
+                        </div>
+
+                    </div>
+                    <div style="color: black;"
+                        class="py-2 fw-bold px-3 d-flex flex-row justify-content-between align-items-start">
+                        <div class="d-flex flex-row justify-content-start align-items-start col-4">
+                            <img src="images/radio_button_uncheck.png" />
+                            <div class="mx-2 d-flex flex-row justify-content-between align-items-start">
+                                <img src="images/NoPath - Copy.png" />
+                                <div class=" mx-1 d-flex flex-column justify-content-center align-items-start">
+                                    <div>resonance-haven.mp3</div>
+                                    <div style="font-size: 0.8em;">James</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row  col-1">
+                            <div class="mx-1">Lost</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">James</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1">2:30</div>
+                        </div>
+                        <div class="d-flex flex-row col-1">
+                            <div class="mx-1"></div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-end col-1">
+                            <img src="images/play_circle_FILL0_wg.png" />
+                            <img src="images/edit_square_FILL0_wg.png" />
+                        </div>
+
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+        function changeStyle(id) {
+            var div = document.getElementById(id);
+            div.style.background = div.style.background == "#D9F8D9" ? "white" : "#D9F8D9";
+        }
+        function showdiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "block";
+        }
+
+        function hideDiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "none";
+        }
+        function handleFiles(event) {
+    var files = event.target.files;
+    $("#src").attr("src", URL.createObjectURL(files[0]));
+    document.getElementById("audio").load();
+}
+
+document.getElementById("upload").addEventListener("change", handleFiles, false);
+
+        // document.getElementById('Audiofiles').onchange = function () {
+            // var src = URL.createObjectURL(this.files[0])
+            // var x = document.getElementById("Audiofiles");
+            // console.log(x);
+            // console.log(URL.createObjectURL(this.files[0]));
+            // document.getElementById('image').src = src
+        // }
+    </script>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

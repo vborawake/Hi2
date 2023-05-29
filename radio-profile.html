@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="radio-media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light myNavbar">
+        <div class="container-fluid">
+            <img src="images/logo.png" width="100px" />
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- <div class="navbarRight">
+                    <p class="navbarRightText">
+                        <i class="fa-solid fa-user"></i>
+                    </p>
+                    <p class="navbarRightText">Joy Radio</p>
+                </div> -->
+                <div class="profile-col navbarRight px-4">
+                    <img src="images/profile-pic.jpg" class="profile-pic mx-3" />
+                    <span class="fw-bold text-white">Rosy Radio</span>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="media-dashboard d-flex flex-row justify-content-end p-5">
+        <div class="radio-side-navbar">
+            <div style="gap: 5%; background-color: #f1eaea; "
+                class=" side-bar-top-div d-flex flex-row justify-content-start align-items-center ">
+                <div style="background-color: #4cd137; border-radius: 10px; padding: 0.5em;">
+                    <img src="images/dash.png" style="width: 2.5em;" />
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="fw-bold">Joy Radio</div>
+                    <div>08:20 PM GMT</div>
+                </div>
+            </div>
+            <div class="p-2 d-flex flex-column  justify-content-center align-items-start">
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-dashboard-lay.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="dashboard.html" style="color: black; font-size: 1.4vw;">Dashboard</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-person-24.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="radio-profile.html" style="color: #131C61; font-size: 1.4vw;">Profile</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-song-32.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="radio-media.html" style="color: black; font-size: 1.4vw;">Media</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-playlist-24.png" />
+                    <div class="fw-bold mx-3">
+                        <a href="radio-playlist.html" style="color: black; font-size: 1.4vw;">Playlist</a>
+                    </div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-radio-tower-1.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Broadcast</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-estimate-24.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Subscription</div>
+                </div>
+                <div class="py-2 px-3 d-flex flex-row justify-content-start align-items-start">
+                    <img src="images/icons8-statistic-doc.png" />
+                    <div class="fw-bold mx-3" style="color: black; font-size: 1.4vw;">Report</div>
+                </div>
+            </div>
+        </div>
+        <div class=" media-right-side" style="width: 80%;">
+            <div id="profilePreview">
+                <div class="w-100  d-flex flex-row justify-content-end align-items-start">
+                    <div style="margin-right: 25em; background-color: #4cd137; border-radius: 10px; padding: 0.5em;">
+                        <img  src="images/dash.png" style="width: 5em;" />
+                    </div>
+                    <button class="blue-button" style="padding: 0.5em 3em;"
+                        onclick="hideDiv('profilePreview'); showdiv('editableProfile')">Edit</button>
+                </div>
+                <p class="fw-bold my-2">Radio Station Name</p>
+                <input type="text" class="box-template w-100" placeholder="Joy Radio" />
+
+                <p class="fw-bold my-2">Logo URL</p>
+                <input type="text" class="box-template w-100" placeholder="" />
+
+                <p class="fw-bold my-2">Description</p>
+                <input type="text" class="box-template w-100" style="height: 30vh;" placeholder="" />
+                <p class="fw-bold my-2">Genre</p>
+                <input type="text" class="box-template w-100" placeholder="" />
+                <p class="fw-bold my-2">Website</p>
+                <input type="text" class="box-template w-100" placeholder="" />
+                <p class="fw-bold my-2">Time Zone</p>
+                <input type="text" class="box-template w-100" placeholder="" />
+            </div>
+            <div id="editableProfile">
+                <div class="w-100  d-flex flex-row justify-content-start align-items-start">
+                    <div style=" color: #da8a4c; font-weight: bold;"
+                        onclick="hideDiv('editableProfile'); showdiv('profilePreview')">
+                        Back
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center"
+                        style=" position: relative; margin-left: 23em; background-color: #4cd137; border-radius: 10px; padding: 0.5em;">
+                        <img id="image" src="images/dash.png" style="width: 5em;" />                    
+                        <label class="label m-0 p-0" style="width: 1em;">
+                            <input accept="image/*" type="file" id="files" style="visibility: hidden;" required />
+                            <img src="images/editCamera.png" class="editCamera" />
+                        </label>
+                    </div>
+                </div>
+                <p class="fw-bold my-2">Radio Station Name</p>
+                <input type="text" class="common-input w-100" placeholder="Joy Radio" />
+
+                <p class="fw-bold my-2">Logo URL</p>
+                <input type="text" class="common-input w-100" placeholder="" />
+
+                <p class="fw-bold my-2">Description</p>
+                <input type="text" class="common-input w-100" style="height: 30vh;" placeholder="" />
+                <p class="fw-bold my-2">Genre</p>
+                <input type="text" class="common-input w-100" placeholder="" />
+                <p class="fw-bold my-2">Website</p>
+                <input type="text" class="common-input w-100" placeholder="" />
+                <p class="fw-bold my-2">Time Zone</p>
+                <input type="text" class="common-input w-100" placeholder="" />
+                <div class="w-100 my-2 d-flex flex-column justify-content-center align-items-center">
+                    <button class="blue-button px-4 my-2">Update</button>
+                    <div style="color: #da8a4c; font-weight: bold;">Cancle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function togglediv(id) {
+            var div = document.getElementById(id);
+            div.style.display = div.style.display == "block" ? "none" : "block";
+        }
+        function showdiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "block";
+        }
+
+        function hideDiv(id) {
+            var div = document.getElementById(id);
+            div.style.display = "none";
+        }
+        document.getElementById('files').onchange = function () {
+            var src = URL.createObjectURL(this.files[0])
+            document.getElementById('image').src = src
+        }
+    </script>
+
+    <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
